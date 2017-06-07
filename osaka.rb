@@ -49,8 +49,8 @@ JS/.cYh"u^HA0     }=O      4G-,q%w      %1lz)=(O%q+93w/+X;VMClF@KVAw(P]TDtUc
 ,k,'x=2+e','p     =e;       z=9-x-      x']     +[j]*8+[      'p+=p+e+[1,17,
 81,337][x];r+     =p;b+      =2**r      ','     z=e*14-      1;p=r','p+=w;z+
 =1-e','p+=e'+     l,'if       (e>0      );p      -=1'+      l+';end','z=e*18
--1','p+=4*e-2     '+l,])      [z])      ;z+      =1};6      3000.times{|k|p=
-p*(1-(w-k%w)/     w)^b[k]      ;c       +=p*(     2**      k)};$d=126.chr;e=
+-1','p+=4*e-2     '+l,])      [z])      ;z+      =1};c      =[];63000.times{
+|k|p=p*(1-(w-     k%w)/w)      ^b       [k];c     [k]      =p};$d=126.chr;e=
 32.chr;($*[0]     ?18:1).      ti      mes{x=      t      [/.+?[0-W]/];t=$'+
 x};b=%{t="#{t     }";eval      (q      =%w#$d#          {q}#$d*"");%|}+F.tr(
 '|','')*9;f=-     >           m{      b.slice!(         0,m)};g=->m{puts(f[7
