@@ -1,11 +1,9 @@
-ruby tokyo-maker.rb > tokyo.rb
-ruby tokyo.rb > 1.rb
-ruby 1.rb > 2.rb && ruby 2.rb > 1.rb && ruby 1.rb > 2.rb && ruby 2.rb > 1.rb &&
-ruby 1.rb > 2.rb && ruby 2.rb > 1.rb && ruby 1.rb > 2.rb && ruby 2.rb > 1.rb &&
-ruby 1.rb > 2.rb && ruby 2.rb > 1.rb && ruby 1.rb > 2.rb && ruby 2.rb > 1.rb &&
-ruby 1.rb > 2.rb && ruby 2.rb > 1.rb && ruby 1.rb > 2.rb && ruby 2.rb > 1.rb &&
-ruby 1.rb > 2.rb && ruby 2.rb > 1.rb && ruby 1.rb > 2.rb && ruby 2.rb > 1.rb &&
-ruby 1.rb > 2.rb && ruby 2.rb > 1.rb && ruby 1.rb > 2.rb && ruby 2.rb > 1.rb &&
-ruby 1.rb > 2.rb && ruby 2.rb > 1.rb && ruby 1.rb > 2.rb && ruby 2.rb > 1.rb &&
-echo "done"
-diff tokyo.rb 1.rb | wc
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")"
+generated=$(mktemp "${TMPDIR:-/tmp}/tokyo-quine.XXXXXX")
+trap 'rm -f "$generated"' EXIT HUP INT TERM
+ruby tokyo-maker.rb > "$generated"
+ruby -c "$generated"
+mv "$generated" tokyo.rb
+ruby test-tokyo.rb
